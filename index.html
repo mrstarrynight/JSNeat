@@ -101,8 +101,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
 					   				<div class="slider-text-inner js-fullheight">
 					   					<div class="desc">
-						   					<h1>Hi! <br>I'm an Javascript recoverer</h1>
-						   					<h2>Our goal is saving the world from JS minifier<h2>
+						   					<h1>Hi! <br>I'm JSNeat</h1>
+						   					<h2>My mission is to make Javascript files availabe to everyone<h2>
 											</div>
 					   				</div>
 					   			</div>
@@ -140,6 +140,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 										<p>
 											In modern Web development, program understanding plays an equally important role. Web technologies and program- ming languages require the exposure of source code to Web browsers in the client side to be executed there. To avoid such exposure, the source code such as JavaScript (JS) files are often obfuscated in which the variable names are minified, i.e., the variable names are replaced with short, opaque, and meaningless names. The intention has two folds. First, it makes the JS files smaller and thus are quickly loaded to improve performance. Second, minification diminishes code readability for the readers, while maintaining the program semantics. Due to those reasons, there is a natural need to automatically recover the minified code with meaningful variable names. That's why JSNeat was born.
 										</p>
+
+										<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+										<img src="images/minified.png" alt="" width="350" height="250">
+					                  	<p>A minified code from real-world</p>
+					                  	</div>
+					                  	
+					                  	<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+					                  	<img src="images/original.png" alt="" width="350" height="250">
+					                  	<p>The original code of the minified code above</p>
+					                  	</div>
 									</div>
 								</div>
 							</div>
@@ -302,7 +312,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 						</div>
 					</div>
 					<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<p>We use three types of contexts to match a variable in given minified code against the corpus including the context of properties and roles of the variable, the context of that variable and relations with other variables under recovery, and the context of the task of the function to which the variable contributes. </p>
+							<p>The name recovering process of variables in minified code is affected by multiple factors. Let us illustrate these factors through the following observations:</p>		
+							<p>Each individual variable has certain properties and plays particular roles in the code. Thus, the name of a variable is intuitively affected by its properties and roles.
+							In a function, a variable might collaborate with other variables to implement the function. Consequently, the recov- ering name for a variable might be influenced by the name of others.
+							Within a function, e.g., getClipboardContent, a variable name, e.g., contentType is affected by the specific task of the function that is functionally described by the function’s name </p>
+
+							<!-- <p>We use three types of contexts to match a variable in given minified code against the corpus including the context of properties and roles of the variable, the context of that variable and relations with other variables under recovery, and the context of the task of the function to which the variable contributes. </p> -->
 					</div>
 					<div class="row">
 						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
@@ -319,7 +334,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									         <div class="panel-body">
 									            <div class="row">
 										      		<div >
-										      			<p>This section presents the single-variable context that we use in the name recovery process.</p>
+										      			<p>The intuition for this context is that to recover the name of a variable, one could use its own context based on its own properties and roles in the code.
+										      			By properties of a variable, we refer to the methods or fields to which a variable of certain type can access. 
+														By the role of a variable, we refer to its usage context with the method calls or field accesses that were not minified. </p>
 										      		</div>
 			<!-- 							      		<div class="col-md-6">
 										      			<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
@@ -337,7 +354,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									    </div>
 									    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 									        <div class="panel-body">
-									            <p>This section presents how we define and use multiple-variable usage context in name recovery.</p>
+									            <p>To achieve a specific programming task, developers use one or multiple variables in their code. Because the variables all play their roles in the code, their names are often relevant and consistent with one another in order to achieve the common task in the function to which they belong.</p>
 			<!-- 										<ul>
 														<li>Separated they live in Bookmarksgrove right</li>
 														<li>Separated they live in Bookmarksgrove right</li>
@@ -354,7 +371,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									    </div>
 									    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 									        <div class="panel-body">
-									            <p>This section presents how we define and use task-specific usage context in name recovery..</p>	
+									            <p>In a program, a function has its functionality and is written to realize a specific task. Each variable used in that function plays a certain role toward that task. Thus, the names of variables are relevant to the task of the function and often consistent with one another.</p>	
 									        </div>
 									    </div>
 									</div>
@@ -414,6 +431,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					               <div class="timeline-label">
 					                  <h2><a >Comparison with state-of-the-arts</a> </h2>
 					                  <p>In this experiment, we evaluate JSNEAT’s accuracy and compare it with the state-of-the-art approaches JSNiceand JSNaughty.</p>
+
+
+					                  	<img src="images/comparison_3tools.png" alt="" width="500" height="300">
+					                  	<p>Accuracy Comparison</p>
+					                  	
+					                  	<img src="images/overlapping_vein.png" alt="" width="300" height="250">
+					                  	<p> Overlapping among Results from Three Tools</p>
 					               </div>
 					            </div>
 					         </article>
@@ -426,7 +450,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					               </div>
 					               <div class="timeline-label">
 					               	<h2><a >Intrinsic Evaluation Results</a> </h2>
-					                  <p>This experiment aims to evaluate how different combina- tions of contexts contribute to JSNEAT’s overall accuracy</p>
+					                  <p>This experiment aims to evaluate how different combinations of contexts contribute to JSNEAT’s overall accuracy</p>
+					                  <img src="images/combination.png" alt="" width="450" height="150">
+					                  <p> Impact of Contexts on Accuracy and Recovery Time </p>
 					               </div>
 					            </div>
 					         </article>
@@ -451,6 +477,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					               <div class="timeline-label">
 					               	<h2><a>Time complexity</a> </h2>
 					                  <p>All experiments were run on a Linux computer server with twenty Intel Xeon 2.2GHz processors, 256GB RAM. As seen, the time to recover for a file or a for a variable with JSNEAT is twice as fast as with JSNice and 4x as fast as with JNaughty. More importantly, JSNEAT’s training time is 4x faster than JSNice and 6x faster than JSNaughty. This can be achieved due the nature of information retrieval in JSNEAT, in comparison to machine learning in JSNice and JSNaughty</p>
+					                  <img src="images/timeComparison.png" alt="" width="400" height="100">
+					                  <p>Running Time Comparison</p>
 					               </div>
 					            </div>
 					         </article>
@@ -489,7 +517,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 						</div>
 					</div>
 					<div class="row row-pt-md">
-						<div class="col-md-4 text-center animate-box">
+						<div class="col-md-6 text-center animate-box">
 							<div class="services color-1">
 								<span class="icon">
 									<i class="icon-data"></i>
@@ -497,10 +525,18 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 								<div class="desc">
 									<h3>Total corpus</h3>
 									<p>We collected a corpus of 12,000 open-source JavaScript projects from GitHub with highest ratings.</p>
+									<p>Download</p>
+									<ul>
+										<li><a href="https://github.com">Training_set</a></li>
+										<li><a href="https://github.com">Testing_set</a></li>
+									</ul>
+
+									<img src="images/corpus.png" alt="" width="350" height="125">
+				                  	<p>Data collection</p>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4 text-center animate-box">
+						<div class="col-md-6 text-center animate-box">
 							<div class="services color-2">
 								<span class="icon">
 									<i class="icon-bulb"></i>
@@ -508,6 +544,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 								<div class="desc">
 									<h3>Relation graph data</h3>
 									<p>To build the relation graphs, we used Rhino to parse the JS files and extract the context information. Table belows shows the statistics of our dataset G of relation graphs.</p>
+									<img src="images/RG_stat.png" alt="" width="350" height="125">
+				                  	<p>Database of Relation Graphs</p>
 								</div>
 							</div>
 						</div>
