@@ -1,3 +1,3 @@
 # JSNeatSite
 Link:
-https://mrstarrynight.github.io/JSNeatSite/
+https://mrstarrynight.github.io/JSNeat/
