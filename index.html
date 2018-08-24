@@ -138,7 +138,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 										<span class="heading-meta">Motivation</span>
 										<h2 class="colorlib-heading">Why we creat JSNeat?</h2>
 										<p>
-											In modern Web development, program understanding plays an equally important role. Web technologies and program- ming languages require the exposure of source code to Web browsers in the client side to be executed there. To avoid such exposure, the source code such as JavaScript (JS) files are often obfuscated in which the variable names are minified, i.e., the variable names are replaced with short, opaque, and meaningless names. The intention has two folds. First, it makes the JS files smaller and thus are quickly loaded to improve performance. Second, minification diminishes code readability for the readers, while maintaining the program semantics. Due to those reasons, there is a natural need to automatically recover the minified code with meaningful variable names. That's why JSNeat was born.
+											In modern Web development, program understanding plays an equally important role. Web technologies and programming languages require the exposure of source code to Web browsers in the client side to be executed there. To avoid such exposure, the source code such as JavaScript (JS) files are often obfuscated in which the variable names are minified, i.e., the variable names are replaced with short, opaque, and meaningless names. The intention has two folds. First, it makes the JS files smaller and thus are quickly loaded to improve performance. Second, minification diminishes code readability for the readers, while maintaining the program semantics. Due to those reasons, there is a natural need to automatically recover the minified code with meaningful variable names. That's why JSNeat was born.
 										</p>
 
 										<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
@@ -314,7 +314,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
 							<p>The name recovering process of variables in minified code is affected by multiple factors. Let us illustrate these factors through the following observations:</p>		
 							<p>Each individual variable has certain properties and plays particular roles in the code. Thus, the name of a variable is intuitively affected by its properties and roles.
-							In a function, a variable might collaborate with other variables to implement the function. Consequently, the recov- ering name for a variable might be influenced by the name of others.
+							In a function, a variable might collaborate with other variables to implement the function. Consequently, the recovering name for a variable might be influenced by the name of others.
 							Within a function, e.g., getClipboardContent, a variable name, e.g., contentType is affected by the specific task of the function that is functionally described by the function’s name </p>
 
 							<!-- <p>We use three types of contexts to match a variable in given minified code against the corpus including the context of properties and roles of the variable, the context of that variable and relations with other variables under recovery, and the context of the task of the function to which the variable contributes. </p> -->
