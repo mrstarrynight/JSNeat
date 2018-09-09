@@ -175,6 +175,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 										      			<p align="justify">The intuition for this context is that to recover the name of a variable, one could use its own context based on its own properties and roles in the code.
 										      			By properties of a variable, we refer to the methods or fields to which a variable of certain type can access. 
 														By the role of a variable, we refer to its usage context with the method calls or field accesses that were not minified. </p>
+													
+													<p align="justify">The single-variable usage context of a variable is presented by a relation graph (RG) that is a directed graph in the shape of a star.
+														The center vertex of the RG represents the variable. The other vertices represent the methods/fields in method calls/field accesses, respectively, and are labeled with their names. 
+														Edges represent relations and are labeled with relation types.</p>
 										      		</div>
 
 										      	</div>
